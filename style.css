@@ -1,276 +1,337 @@
-/* ==========================
-   GOOGLE FONT
-========================== */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
-
-/* ==========================
-   RESET
-========================== */
-
+/* nav */
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
 }
 
-html{
-    scroll-behavior:smooth;
-}
-
 body{
-    font-family:'Inter',sans-serif;
-    color:#111827;
-    background:#fff;
-    line-height:1.6;
+    font-family:Arial, sans-serif;
 }
 
-img{
-    width:100%;
-    display:block;
-}
-
-a{
-    text-decoration:none;
-}
-
-ul{
-    list-style:none;
-}
-
-.container{
+.container-navbar{
     width:90%;
     max-width:1200px;
+    height:80px;
     margin:auto;
-}
 
-/* ==========================
-   BUTTON
-========================== */
-
-.btn{
-    display:inline-block;
-    background:#2563eb;
-    color:#fff;
-    padding:14px 28px;
-    border-radius:8px;
-    font-weight:600;
-    transition:.3s;
-}
-
-.btn:hover{
-    background:#1d4ed8;
-}
-
-/* ==========================
-   HEADER
-========================== */
-
-header{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    background:#fff;
-    z-index:999;
-    box-shadow:0 2px 10px rgba(0,0,0,.08);
-}
-
-.navbar{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    height:80px;
 }
 
-/* ==========================
-   LOGO
-========================== */
-
-.logo{
+.nav ul{
     display:flex;
-    align-items:center;
-    gap:12px;
+    list-style:none;
+    gap:30px;
 }
 
-.logo img{
-    width:42px;
+.nav a{
+    text-decoration:none;
+    color:#333;
 }
 
-.logo h3{
-    font-size:18px;
-    font-weight:800;
-    line-height:1;
+.btn{
+    background:#2563eb;
+    color:white;
+    border:none;
+    padding:12px 24px;
+    border-radius:8px;
+    cursor:pointer;
 }
-
-.logo span{
-    font-size:13px;
-    color:#555;
-}
-
-/* ==========================
-   NAV MENU
-========================== */
-
-nav ul{
-    display:flex;
-    gap:40px;
-}
-
-nav a{
-    color:#444;
-    font-weight:500;
-    transition:.3s;
-}
-
-nav a:hover{
-    color:#2563eb;
-}
-
-/* ==========================
-   HERO
-========================== */
 
 .hero{
-    position:relative;
-    height:95vh;
-    overflow:hidden;
-    margin-top:80px;
-}
+    height:100vh;
 
-.hero-img{
-    position:absolute;
-    width:100%;
-    height:100%;
-    object-fit:cover;
-}
+   background-image:
+    linear-gradient(
+        to right,
+        rgba(0,0,0,0.95),
+        rgba(0,0,0,0.85),
+        rgba(0,0,0,0.60),
+        rgba(0,0,0,0.25)
+    ),
+    url("./assets/banner.jpg");
 
-.overlay{
-    position:absolute;
-    inset:0;
-    background:rgba(0,0,0,.55);
-}
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
 
-.hero-content{
-    position:relative;
-    z-index:2;
-    height:100%;
     display:flex;
-    flex-direction:column;
     justify-content:center;
     align-items:center;
+}
+.hero-content{
     text-align:center;
-    color:#fff;
+    color:white;
 }
 
 .hero-content h1{
-    font-size:70px;
-    font-weight:800;
-    line-height:1.1;
-    margin-bottom:25px;
-}
-
-.hero-content h1 span{
-    font-style:italic;
+    font-size:64px;
 }
 
 .hero-content p{
-    max-width:760px;
     font-size:20px;
-    color:#e5e7eb;
-    margin-bottom:45px;
+    margin:20px 0;
 }
 
 .hero-btn{
     display:inline-block;
-    padding:18px 42px;
     background:#2563eb;
-    color:#fff;
-    font-size:18px;
-    font-weight:600;
-    border-radius:10px;
-    transition:.3s;
+    color:white;
+    text-decoration:none;
+    padding:14px 30px;
+    border-radius:8px;
+}
+/* ===========================
+   Meet the Speakers
+=========================== */
+
+.speakers{
+    width:90%;
+    max-width:1200px;
+    margin:100px auto;
 }
 
-.hero-btn:hover{
-    background:#1d4ed8;
-    transform:translateY(-3px);
-}
-
-/* ==========================
-   SECTION TITLE
-========================== */
-
-section{
-    padding:100px 0;
-}
-
-section h2{
+.speaker-title{
     text-align:center;
-    font-size:48px;
-    font-weight:800;
+    font-size:52px;
+    font-weight:700;
+    margin-bottom:50px;
+}
+
+.speaker-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:30px;
+}
+
+.speaker-card{
+    background:white;
+    border:1px solid #e5e7eb;
+    border-radius:12px;
+    overflow:hidden;
+}
+
+.speaker-card img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+    display:block;
+}
+
+.speaker-info{
+    padding:20px;
+}
+
+.speaker-info span{
+    color:#2563eb;
+    font-size:12px;
+    font-weight:bold;
+    text-transform:uppercase;
+}
+
+.speaker-info h3{
+    margin-top:10px;
+    font-size:28px;
+    color:#111827;
+}
+
+.speaker-info p{
+    margin-top:8px;
+    color:#6b7280;
+    font-size:16px;
+}
+/* ===========================
+   Pricing Section
+=========================== */
+
+.pricing{
+    padding:100px 0;
+    background:#ffffff;
+}
+
+.pricing-title{
+    text-align:center;
+    font-size:54px;
+    font-weight:700;
+    color:#111827;
+}
+
+.pricing-subtitle{
+    text-align:center;
+    color:#6b7280;
+    margin-top:12px;
+    margin-bottom:60px;
+    font-size:16px;
+}
+
+.pricing-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+    margin:200px;
+}
+
+/* Card */
+
+.pricing-card{
+    background:#ffffff;
+    border:1px solid #e5e7eb;
+    border-radius:10px;
+    padding:30px;
+}
+
+.plan{
+    color:#9ca3af;
+    font-size:12px;
+    font-weight:bold;
+    letter-spacing:1px;
+}
+
+.pricing-card h3{
+    font-size:52px;
+    margin-top:10px;
+    color:#111827;
+}
+
+.price-text{
+    color:#6b7280;
     margin-bottom:20px;
 }
 
-.subtitle{
+.pricing-card hr{
+    border:none;
+    border-top:1px solid #e5e7eb;
+    margin:20px 0;
+}
+
+.pricing-card ul{
+    list-style:disc;
+    padding-left:20px;
+}
+
+.pricing-card li{
+    margin-bottom:14px;
+    color:#4b5563;
+    font-size:15px;
+}
+
+/* Buttons */
+
+.price-btn{
+    width:100%;
+    margin-top:30px;
+    padding:14px;
+    border-radius:8px;
+    border:1px solid #2563eb;
+    background:white;
+    color:#2563eb;
+    cursor:pointer;
+    font-weight:600;
+}
+
+/* Featured Card */
+
+.featured{
+    background:#0f172a;
+    color:white;
+}
+
+.featured h3,
+.featured .price-text,
+.featured li{
+    color:white;
+}
+
+.featured hr{
+    border-top:1px solid rgba(255,255,255,.2);
+}
+
+.featured .plan{
+    color:#94a3b8;
+}
+
+.featured-btn{
+    background:#2563eb;
+    color:white;
+    border:none;
+}
+
+/* Contact Button */
+
+.contact-btn{
+    border:1px solid #111827;
+    color:#111827;
+}
+/* ===========================
+   Schedule Section
+=========================== */
+
+.schedule{
+    padding:100px 0;
+    background:#f8fafc;
+    margin:300px;
+}
+
+.schedule-title{
     text-align:center;
-    color:#666;
+    font-size:52px;
+    font-weight:700;
+    color:#111827;
+}
+
+.schedule-subtitle{
+    text-align:center;
+    color:#6b7280;
+    margin-top:15px;
     margin-bottom:60px;
+    font-size:18px;
 }
 
-/* ==========================
-   RESPONSIVE
-========================== */
-
-@media(max-width:992px){
-
-    nav{
-        display:none;
-    }
-
-    .hero-content h1{
-        font-size:52px;
-    }
-
-    .hero-content p{
-        font-size:18px;
-    }
-
+.schedule-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
 }
 
-@media(max-width:768px){
-
-    .hero{
-        height:80vh;
-    }
-
-    .hero-content h1{
-        font-size:40px;
-    }
-
-    .hero-content p{
-        font-size:16px;
-        width:95%;
-    }
-
-    .btn{
-        padding:12px 24px;
-    }
-
+.schedule-card{
+    background:#ffffff;
+    border:1px solid #e5e7eb;
+    border-radius:12px;
+    padding:30px;
+    transition:0.3s;
 }
 
-@media(max-width:500px){
+.schedule-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
 
-    .logo h3{
-        font-size:15px;
-    }
+.schedule-card h3{
+    font-size:28px;
+    color:#2563eb;
+    margin-bottom:8px;
+}
 
-    .hero-content h1{
-        font-size:32px;
-    }
+.schedule-card span{
+    color:#6b7280;
+    font-size:15px;
+}
 
-    .hero-btn{
-        padding:14px 28px;
-        font-size:16px;
-    }
+.schedule-card ul{
+    margin-top:25px;
+    padding-left:20px;
+}
 
+.schedule-card li{
+    margin-bottom:15px;
+    color:#374151;
+    line-height:1.6;
+}
+.container-footer
+{
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
